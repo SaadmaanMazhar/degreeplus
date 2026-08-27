@@ -1,0 +1,24 @@
+server:
+  port: ${PORT:8080}
+
+spring:
+  application:
+    name: degreeplus-backend
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/degreeplus?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+degreeplus:
+  jwt:
+    secret: ${JWT_SECRET:change-this-development-secret-please-use-64-characters-minimum}
+    expiration-minutes: ${JWT_EXPIRATION_MINUTES:120}
+  academic:
+    passing-grade-point: ${PASSING_GRADE_POINT:1.0}
+  cors:
+    allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:3000}
+
+logging:
+  level:
+    org.springframework.security: INFO
