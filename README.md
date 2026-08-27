@@ -23,6 +23,8 @@ Demo login after seeding:
 - Email: `student@degreeplus.test`
 - Password: `password123`
 
+To populate every schema table with presentation/demo data, run `sql/demo-data.sql` after `sql/schema.sql`.
+
 ## Backend
 
 Install Maven if it is not already available, then run:
